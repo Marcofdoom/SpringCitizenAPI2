@@ -15,13 +15,18 @@ public class Citizen {
 
 	@Id
 	private Long citizenId;
+
 	private String forenames;
+
 	private String surname;
+
 	private String homeAddress;
 
 	@Temporal(TemporalType.DATE)
 	private Date dateOfBirth;
+
 	private String placeOfBirth;
+
 	private String sex;
 
 	public Citizen() {
