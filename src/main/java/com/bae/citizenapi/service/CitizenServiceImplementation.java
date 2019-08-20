@@ -1,12 +1,12 @@
-package com.example.springbatchexample1.service;
+package com.bae.citizenapi.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.springbatchexample1.model.Citizen;
-import com.example.springbatchexample1.repository.CitizenRepository;
+import com.bae.citizenapi.model.Citizen;
+import com.bae.citizenapi.repository.CitizenRepository;
 
 @Service
 public class CitizenServiceImplementation implements CitizenService {

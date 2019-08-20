@@ -1,10 +1,10 @@
-package com.example.springbatchexample1.service;
+package com.bae.citizenapi.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.example.springbatchexample1.model.Citizen;
+import com.bae.citizenapi.model.Citizen;
 
 @Service
 public interface CitizenService {

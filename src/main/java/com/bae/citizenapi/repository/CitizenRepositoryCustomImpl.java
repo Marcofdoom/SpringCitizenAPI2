@@ -1,4 +1,4 @@
-package com.example.springbatchexample1.repository;
+package com.bae.citizenapi.repository;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -15,7 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.example.springbatchexample1.model.Citizen;
+import com.bae.citizenapi.model.Citizen;
 
 @Repository
 public class CitizenRepositoryCustomImpl implements CitizenRepositoryCustom {

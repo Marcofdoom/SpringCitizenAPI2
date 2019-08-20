@@ -1,9 +1,9 @@
-package com.example.springbatchexample1.repository;
+package com.bae.citizenapi.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.springbatchexample1.model.Citizen;
+import com.bae.citizenapi.model.Citizen;
 
 @Repository
 public interface CitizenRepository extends JpaRepository<Citizen, Long>, CitizenRepositoryCustom {

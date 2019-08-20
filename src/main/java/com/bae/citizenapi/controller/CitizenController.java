@@ -1,4 +1,4 @@
-package com.example.springbatchexample1.controller;
+package com.bae.citizenapi.controller;
 
 import java.util.Date;
 
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import com.example.springbatchexample1.model.Citizen;
-import com.example.springbatchexample1.service.CitizenService;
+import com.bae.citizenapi.model.Citizen;
+import com.bae.citizenapi.service.CitizenService;
 
 @RestController
 @RequestMapping("/Citizen")

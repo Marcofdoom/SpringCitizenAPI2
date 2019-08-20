@@ -1,11 +1,11 @@
-package com.example.springbatchexample1.repository;
+package com.bae.citizenapi.repository;
 
 import java.util.Date;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.example.springbatchexample1.model.Citizen;
+import com.bae.citizenapi.model.Citizen;
 
 @Repository
 public interface CitizenRepositoryCustom {
