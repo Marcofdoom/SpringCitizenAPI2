@@ -71,7 +71,6 @@ public class CitizenRepositoryCustomImpl implements CitizenRepositoryCustom {
 		cq.where(predicates.toArray(new Predicate[0]));
 
 		TypedQuery<Citizen> query = entityManager.createQuery(cq);
-		System.out.println(query.toString());
 		return query.getResultList();
 	}
 
