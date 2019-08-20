@@ -4,7 +4,9 @@ target/
 !**/src/main/**
 !**/src/test/**
 /src/main/resources/citizen.csv
-**/src/main/resources/import.sql
+
+/src/main/resources/import.sql
+**/src/main/resources/application.properties
 
 ### STS ###
 .apt_generated

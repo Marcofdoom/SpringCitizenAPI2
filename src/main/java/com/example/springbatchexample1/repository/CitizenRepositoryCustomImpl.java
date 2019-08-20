@@ -12,6 +12,7 @@ import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.example.springbatchexample1.model.Citizen;
@@ -25,6 +26,9 @@ public class CitizenRepositoryCustomImpl implements CitizenRepositoryCustom {
 	public CitizenRepositoryCustomImpl(EntityManager entityManager) {
 		this.entityManager = entityManager;
 	}
+
+	@Autowired
+	NamedParameterJdbcTemplate jdbcTemplate;
 
 	@Override
 	public List<Citizen> findCitizens(Long citizenId, String forenames, String surname, String homeAddress,
@@ -67,7 +71,7 @@ public class CitizenRepositoryCustomImpl implements CitizenRepositoryCustom {
 		cq.where(predicates.toArray(new Predicate[0]));
 
 		TypedQuery<Citizen> query = entityManager.createQuery(cq);
-
 		return query.getResultList();
 	}
+
 }
