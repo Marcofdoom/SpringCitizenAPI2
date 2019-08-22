@@ -35,6 +35,7 @@ public class CitizenRepositoryCustomImpl implements CitizenRepositoryCustom {
 			Date dateOfBirth, String placeOfBirth, String sex) {
 
 		CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+
 		CriteriaQuery<Citizen> cq = cb.createQuery(Citizen.class);
 
 		Root<Citizen> citizen = cq.from(Citizen.class);
