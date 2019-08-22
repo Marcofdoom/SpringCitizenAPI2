@@ -20,8 +20,7 @@ public class CitizenServiceImplementation implements CitizenService {
 
 	@Override
 	public List<Citizen> getCitizens(Citizen citizen) {
-		return citizenRepository.findCitizens(citizen.getCitizenId(), citizen.getForenames(),
-				citizen.getSurname(), citizen.getHomeAddress(), citizen.getDateOfBirth(), citizen.getPlaceOfBirth(),
-				citizen.getSex());
+		return citizenRepository.findCitizens(citizen.getCitizenId(), citizen.getForenames(), citizen.getSurname(),
+				citizen.getHomeAddress(), citizen.getDateOfBirth(), citizen.getPlaceOfBirth(), citizen.getSex());
 	}
 }
