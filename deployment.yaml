@@ -1,0 +1,21 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: skyre-citizen
+  labels: 
+    app: skyre-citizen
+spec:
+  selector:
+    matchLabels:
+      app: skyre-citizen
+  template:
+    metadata:
+      labels:
+        app: skyre-citizen
+    spec:
+      containers:
+      - name: skyre-citizen
+        image: eyjafjalla/skyre-citizen:latest
+        ports:
+        - containerPort: 8081
