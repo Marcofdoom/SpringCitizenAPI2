@@ -6,6 +6,7 @@ target/
 /src/main/resources/citizen.csv
 /src/main/resources/import.sql
 
+
 ### STS ###
 .apt_generated
 .classpath

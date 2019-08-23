@@ -1,16 +1,21 @@
-package com.example.springbatchexample1;
+package com.bae.citizenapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
+import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
+
+@Configuration
+@EnableEncryptableProperties
 @SpringBootApplication
-public class SpringBatchExample1Application {
+public class SpringCitizenApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBatchExample1Application.class, args);
+		SpringApplication.run(SpringCitizenApiApplication.class, args);
 	}
 
 	@Bean
