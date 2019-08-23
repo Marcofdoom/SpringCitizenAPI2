@@ -9,5 +9,5 @@ import com.bae.citizenapi.model.Citizen;
 @Service
 public interface CitizenService {
 
-	public List<Citizen> getCitizens(Citizen citizen);
+	public List<Citizen> findCitizen(Citizen citizen);
 }

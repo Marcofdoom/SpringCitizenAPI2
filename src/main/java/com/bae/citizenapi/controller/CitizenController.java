@@ -21,22 +21,14 @@ public class CitizenController {
 
 	private CitizenService service;
 
-	private RestTemplate restTemplate;
-
 	public CitizenController() {
 
 	}
 
 	@Autowired
-	public CitizenController(CitizenService service, RestTemplate restTemplate) {
+	public CitizenController(CitizenService service) {
 		this.service = service;
-		this.restTemplate = restTemplate;
 	}
-
-//	@GetMapping("/getCitizens")
-//	public ResponseEntity<Object> getCitizens(@RequestBody Citizen citizen) {
-//		return new ResponseEntity<>(service.getCitizens(citizen), HttpStatus.OK);
-//	}
 
 	@GetMapping("/getCitizens")
 	public ResponseEntity<Object> getCitizens(@RequestParam(value = "citizenId", required = false) Long citizenId,
@@ -47,16 +39,8 @@ public class CitizenController {
 			@RequestParam(value = "placeOfBirth", required = false) String placeOfBirth,
 			@RequestParam(value = "sex", required = false) String sex) {
 
-		Citizen citizenEntity = new Citizen();
+		Citizen citizenEntity = new Citizen(citizenId, forenames, surname, homeAddress, dateOfBirth, placeOfBirth, sex);
 
-		citizenEntity.setCitizenId(citizenId);
-		citizenEntity.setForenames(forenames);
-		citizenEntity.setSurname(surname);
-		citizenEntity.setHomeAddress(homeAddress);
-		citizenEntity.setDateOfBirth(dateOfBirth);
-		citizenEntity.setPlaceOfBirth(placeOfBirth);
-		citizenEntity.setSex(sex);
-
-		return new ResponseEntity<>(service.getCitizens(citizenEntity), HttpStatus.OK);
+		return new ResponseEntity<>(service.findCitizen(citizenEntity), HttpStatus.OK);
 	}
 }
