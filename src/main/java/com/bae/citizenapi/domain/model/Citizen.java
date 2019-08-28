@@ -1,4 +1,4 @@
-package com.bae.citizenapi.model;
+package com.bae.citizenapi.domain.model;
 
 import java.util.Date;
 
